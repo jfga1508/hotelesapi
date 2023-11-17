@@ -14,7 +14,9 @@ async function get(req, res) {
     if (results.length > 0) {
         res.json({ token: uuidv4() });
     } else {
-        res.json({ error: `Can't validate credentials` });
+        res.json({
+            error: `Can't validate credentials, please check and try again.`,
+        });
     }
 }
 
